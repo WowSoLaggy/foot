@@ -1,0 +1,79 @@
+CREATE DATABASE foot
+CHARACTER SET utf8
+COLLATE utf8_unicode_ci;
+USE foot;
+CREATE TABLE IF NOT EXISTS players_tbl (
+  id INT PRIMARY KEY,
+  name TEXT,
+  image TEXT
+);
+CREATE TABLE IF NOT EXISTS pitches_tbl (
+  id INT PRIMARY KEY,
+  name TEXT,
+  image TEXT
+);
+CREATE TABLE IF NOT EXISTS gamedays_tbl (
+  id INT PRIMARY KEY,
+  date DATE,
+  pitch INT
+);
+CREATE TABLE IF NOT EXISTS games_tbl (
+  id INT PRIMARY KEY,
+  gameday INT,
+  team1_name TEXT,
+  team2_name TEXT,
+  team1_final_score INT,
+  team2_final_score INT,
+  team1_num_players INT,
+  team2_num_players INT,
+  team1_player1 INT,
+  team1_player2 INT,
+  team1_player3 INT,
+  team1_player4 INT,
+  team1_player5 INT,
+  team2_player1 INT,
+  team2_player2 INT,
+  team2_player3 INT,
+  team2_player4 INT,
+  team2_player5 INT,
+  goal1_author INT,
+  goal1_assist INT,
+  goal2_author INT,
+  goal2_assist INT,
+  goal3_author INT,
+  goal3_assist INT,
+  goal4_author INT,
+  goal4_assist INT,
+  goal5_author INT,
+  goal5_assist INT,
+  goal6_author INT,
+  goal6_assist INT,
+  goal7_author INT,
+  goal7_assist INT,
+  goal8_author INT,
+  goal8_assist INT,
+  goal9_author INT,
+  goal9_assist INT,
+  goal10_author INT,
+  goal10_assist INT,
+  goal11_author INT,
+  goal11_assist INT,
+  goal12_author INT,
+  goal12_assist INT,
+  goal13_author INT,
+  goal13_assist INT,
+  goal14_author INT,
+  goal14_assist INT,
+  goal15_author INT,
+  goal15_assist INT,
+  goal16_author INT,
+  goal16_assist INT,
+  goal17_author INT,
+  goal17_assist INT,
+  goal18_author INT,
+  goal18_assist INT,
+  goal19_author INT,
+  goal19_assist INT,
+  goal20_author INT,
+  goal20_assist INT
+);
