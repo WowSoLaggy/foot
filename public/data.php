@@ -16,7 +16,7 @@ function connect()
 	if (!isset($dbHost) || !isset($dbUser) || !isset($dbPass) || !isset($dbName))
 		throw new Exception('Cannot connect to DB: Please check the connection settings in the "security.php" file');
 	
-	$link = mysqli_connect($dbHost, $dbUser, $dbPass);;
+	$link = mysqli_connect($dbHost, $dbUser, $dbPass);
 	mysqli_select_db($link, $dbName) or die('Error'. mysqli_error($link));
 	mysqli_query($link, "SET NAMES utf8;");
 	
@@ -66,16 +66,39 @@ function getPlayers($connection)
 	return $players;
 }
 
+function getPitches($connection)
+{
+  $pitches = array();
+
+  $result = mysqli_query($connection, "SELECT id, name, image FROM pitches_tbl");
+	$num_pitches = mysqli_num_rows($result);
+	for ($i = 0; $i < $num_pitches; $i++)
+	{
+		$pitch = new Pitch();
+		
+		$pitch->id = mysqli_result($result, $i, 'id');
+		$pitch->name = mysqli_result($result, $i, 'name');
+		$pitch->image = mysqli_result($result, $i, 'image');
+		
+		array_push($pitches, $pitch);
+	}
+	mysqli_free_result($result);
+	
+	return $pitches;
+}
+
 
 function get_data()
 {
   $connection = connect();
 
-  $players = getPlayers($connection);
+  $stats = new Stats();
+  $stats->players = getPlayers($connection);
+  $stats->pitches = getPitches($connection);
   
   disconnect($connection);
   
-  return $players;
+  return $stats;
 }
 
 ?>

@@ -19,6 +19,10 @@ td {
   vertical-align: top;
 }
 
+tr.offset {
+  height: 20px;
+}
+
 table.menu {
   border-spacing: 20px;
 }
@@ -56,5 +60,11 @@ a:hover
 
 img.menu {
   border-radius: 30%;
+  vertical-align: middle;
+}
+
+img.avatar {
+  border-radius: 10%;
+  width: 300px;
   vertical-align: middle;
 }
