@@ -1,7 +1,7 @@
 <?php
 
-include_once('data.phh');
-include_once('pages.php');
+include_once('data.php');
+
 
 $stats = get_data();
 $players = $stats->players;
