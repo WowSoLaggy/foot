@@ -49,7 +49,7 @@ function getPlayers($connection)
 {
 	$players = array();
 	
-	$result = mysqli_query($connection, "SELECT id, name, image FROM players_tbl");
+	$result = mysqli_query($connection, "SELECT * FROM players_tbl");
 	$num_players = mysqli_num_rows($result);
 	for ($i = 0; $i < $num_players; $i++)
 	{
@@ -58,6 +58,20 @@ function getPlayers($connection)
 		$player->id = mysqli_result($result, $i, 'id');
 		$player->name = mysqli_result($result, $i, 'name');
 		$player->image = mysqli_result($result, $i, 'image');
+    $player->squad = mysqli_result($result, $i, 'squad');
+    
+    $player->skills['GK'] = mysqli_result($result, $i, 'GK');
+    $player->skills['DEF'] = mysqli_result($result, $i, 'DEF');
+    $player->skills['BALL'] = mysqli_result($result, $i, 'BALL');
+    $player->skills['PASS'] = mysqli_result($result, $i, 'PASS');
+    $player->skills['ATT'] = mysqli_result($result, $i, 'ATT');
+    $player->skills['SHOT'] = mysqli_result($result, $i, 'SHOT');
+    $player->skills['PHYS'] = mysqli_result($result, $i, 'PHYS');
+    
+    $sum = 0;
+    foreach ($player->skills as &$value)
+      $sum += $value;
+    $player->ovr = round($sum / count($player->skills));
 		
 		array_push($players, $player);
 	}

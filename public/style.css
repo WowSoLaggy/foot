@@ -1,8 +1,6 @@
 body {
-	color: white;
-  background-image: url(images/background.png);
-  background-repeat: no-repeat;
-  background-color: #55934A;
+	background-repeat: no-repeat;
+  background-color: #FFFFFF;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -10,8 +8,6 @@ body {
 
 table {
   border: 0px solid white;
-  margin-left:auto;
-  margin-right:auto;
   border-collapse: separate;
   font-size: 50px;
 }
@@ -28,34 +24,18 @@ table.menu {
   border-spacing: 20px;
 }
 
-td.menu {
-  background-color: #000000AA;
-  border-radius:20px;
-  -moz-border-radius:20px;
-}
-
-table.dark {
-  background-color: #000000AA;
-  border-radius:20px;
-  -moz-border-radius:20px;
-  padding: 10px;
-}
-
 table.header {
-  background-color: #000000AA;
-  border-radius:20px;
-  -moz-border-radius:20px;
   font-size: 50px;
 }
 
 a
 {
-	color: white;
+	color: black;
 	text-decoration: none;
 }
 a:hover
 {
-	color: white;
+	color: black;
 	text-decoration: underline;
 }
 

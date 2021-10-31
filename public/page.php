@@ -9,8 +9,6 @@ function get_frame($str1, $str2)
         <td>
           '.$str1.'
         </td>
-      </tr>
-      <tr>
         <td>
           '.$str2.'
         </td>

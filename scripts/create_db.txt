@@ -5,9 +5,19 @@ CREATE DATABASE foot
 USE foot;
 
 CREATE TABLE players_tbl (
-  id    INT   NOT NULL AUTO_INCREMENT,
-  name  TEXT  NOT NULL,
-  image TEXT  NOT NULL,
+  id        INT   NOT NULL AUTO_INCREMENT,
+  name      TEXT  NOT NULL,
+  image     TEXT  NOT NULL,
+  squad     INT   NOT NULL,
+  position  INT   NOT NULL,
+  
+  GK        INT   NOT NULL,
+  DEF       INT   NOT NULL,
+  BALL      INT   NOT NULL,
+  PASS      INT   NOT NULL,
+  ATT       INT   NOT NULL,
+  SHOT      INT   NOT NULL,
+  PHYS      INT   NOT NULL,
   
   PRIMARY KEY (id)
 );
@@ -16,7 +26,7 @@ CREATE TABLE pitches_tbl (
   id    INT   NOT NULL AUTO_INCREMENT,
   name  TEXT  NOT NULL,
   image TEXT  NOT NULL,
-  
+
   PRIMARY KEY (id)
 );
 
