@@ -15,8 +15,8 @@ usort($players, "nameSorter");
 
 $str = "";
 
-$str .= '<table border=0>';
-$str .= '<tr><td style="text-align: center"><font size=+4>Dream Team Squad</font></td></tr>';
+$str .= '<table border=0 align=center>';
+$str .= '<tr><td colspan=2 style="text-align: center"><font size=+4>Dream Team Squad</font></td></tr>';
 
 $str .= '<tr>';
 $str .= '<td style="text-align: center"><img src="images/squad.png" style="transform: translate(0px, 0px)"/></td>';
