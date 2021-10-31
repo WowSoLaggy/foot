@@ -23,7 +23,7 @@ $str .= '<td style="text-align: center"><img src="images/squad.png" style="trans
 $str .= '<td style="vertical-align: top"><table border=1>';
 
 $str .=
-  '<tr><td></td>';
+  '<tr><td width=80></td>';
   
 foreach ($players[0]->skills as $key => $value)
   $str .= '<td width=45 style="text-align: center">'.$key.'</td>';
